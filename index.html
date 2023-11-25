@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our List</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        margin: 100px auto;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .container::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .container .box {
+        width: calc((100% - 60px) / 3);
+        background-color: gray;
+        border: 3px solid black;
+        float: left;
+        margin-left: 20px;
+        position: relative;
+      }
+
+      .container .box h2 {
+        padding: 8px 60px;
+        color: white;
+        width: fit-content;
+        float: right;
+      }
+      .container .box .first {
+        background-color: red;
+      }
+      .container .box .secound {
+        background-color: rgb(1, 1, 1);
+      }
+      .container .box .third {
+        background-color: blue;
+      }
+      .container .box p {
+        padding: 1em;
+        clear: both;
+        font-weight: bold;
+      }
+
+      @media (min-width: 992px) {
+        .container {
+          width: 90%;
+          position: relative;
+          margin: 0 auto;
+        }
+      }
+
+      @media (min-width: 767px) and (max-width: 991px) {
+        .container {
+          width: 90%;
+
+          margin: 0 auto;
+        }
+        .container .box:first-child,
+        .container .box:nth-child(2) {
+          width: calc((100% - 40px) / 2);
+        }
+        .container .box:last-child {
+          width: calc(100% - 20px);
+          margin-top: 20px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .container {
+          width: 90%;
+
+          margin: 0 auto;
+        }
+        .container .box {
+          width: 100%;
+          margin: 0;
+          margin-bottom: 20px;
+        }
+        .container .box h2 {
+          padding: 5px 20px;
+          color: white;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Our List</h1>
+    <div class="container">
+      <div class="box">
+        <h2 class="first">Chiken</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+          ducimus molestiae perspiciatis reprehenderit libero quam autem
+          aspernatur quas cum et at, quidem quibusdam nisi reiciendis dicta.
+          Blanditiis soluta asperiores hic?
+        </p>
+      </div>
+      <div class="box">
+        <h2 class="secound">Beef</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+          ducimus molestiae perspiciatis reprehenderit libero quam autem
+          aspernatur quas cum et at, quidem quibusdam nisi reiciendis dicta.
+          Blanditiis soluta asperiores hic?
+        </p>
+      </div>
+      <div class="box">
+        <h2 class="third">Sushi</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+          ducimus molestiae perspiciatis reprehenderit libero quam autem
+          aspernatur quas cum et at, quidem quibusdam nisi reiciendis dicta.
+          Blanditiis soluta asperiores hic?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
